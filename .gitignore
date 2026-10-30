@@ -1,0 +1,27 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+data/raw/
+data/derived/
+models/
+outputs/
+
+# Never commit model weights, downloaded artifacts, or credentials.
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+*.onnx
+*.gguf
+*.part
+*.mp4
+*.webm
+*.mov
+*.avi
+.env
+.env.*
+!.env.example
