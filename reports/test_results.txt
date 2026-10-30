@@ -1,0 +1,5 @@
+本机代码测试记录（真实预训练权重的效果实验另见 validation/ 和 real_hazard/）
+命令：MPLCONFIGDIR="$PWD/.cache/matplotlib" .venv/bin/python -m pytest -q
+结果：33 passed in 2.81s
+日期：2026-10-30
+说明：模型机制/端到端单元测试使用小型随机模型，验证软件行为；不作为预训练模型效果证据。

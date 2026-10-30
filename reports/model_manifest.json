@@ -1,0 +1,14 @@
+{
+  "source": "Meta official checkpoint",
+  "url": "https://dl.fbaipublicfiles.com/vjepa2/vitl.pt",
+  "checkpoint_sha256": "5346856ec9df69487fe72a25bf2632aaa8112df33fb67708e3f7374edc1f7012",
+  "checkpoint_bytes": 5127726842,
+  "source_etag": "71cf6756d55670a39bb369fca4716a54-612",
+  "revision": "meta-vitl-5346856ec9df6948",
+  "zip_crc_verified": true,
+  "encoder_key": "target_encoder",
+  "predictor_key": "predictor",
+  "strict_load": true,
+  "transformers": "4.57.1",
+  "converted_weights_sha256": "10623f51b674bfc07371ff30283426f452c724e7512fd649fa8287965499a5bc"
+}

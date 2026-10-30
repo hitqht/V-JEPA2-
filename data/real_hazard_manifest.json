@@ -1,0 +1,116 @@
+{
+  "dataset_version": "real-hazard-v1",
+  "created_date": "2026-10-30",
+  "independent_real_incidents": 1,
+  "source": {
+    "id": "big_blue_1999",
+    "path": "data/raw/big_blue_crane_collapse.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Big_Blue_crane_collapse_at_Miller_Park.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Big_Blue_crane_collapse_at_Miller_Park.webm",
+    "author": "Unnamed OSHA employee (as identified by Commons)",
+    "rights": "Commons PD-USGov / Public Domain Mark; US federal government work",
+    "rights_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "corroborating_source": "https://obis.osha.gov/dcsp/success_stories/compliance_assistance/abbott/abbott_casestudies/slide30.html",
+    "sha256": "fa4c0de9e1f7e5961d10fdd85e636b10dc99acb5fa41e5f7b0e3059426c71e4e",
+    "sha1": "73fc5052f91beddbcfc18a8c9988cb00042e1886",
+    "bytes": 4368085
+  },
+  "annotation": {
+    "origin": "manual visual review of decoded source before model scoring",
+    "target": "visible crane instability/collapse, not pre-incident risk",
+    "source_event_start_s": 55,
+    "source_event_end_s": 61,
+    "boundary_uncertainty_s": 0.5,
+    "negative_means": "no visible collapse; not a certification of safety",
+    "confounds": [
+      "handheld camera motion",
+      "compression",
+      "low resolution",
+      "single annotator"
+    ],
+    "unused_source_interval_s": [
+      0,
+      34
+    ],
+    "edits": "contiguous temporal cuts, remove audio, CFR 30 fps H.264; no synthetic hazard or inserted transition"
+  },
+  "evaluation_settings": {
+    "fps": 8,
+    "window": 16,
+    "stride": 8,
+    "fit": "pad",
+    "dtype": "float32",
+    "threshold_z": 3
+  },
+  "samples": [
+    {
+      "id": "big_blue_calibration",
+      "path": "data/derived/big_blue_calibration.mp4",
+      "sha256": "a38f09b74bc09f3c9f3b7df0a5d3f070eb0b4d80d3dde1e2747187c5b73cb19a",
+      "split": "calibration",
+      "source_start_s": 34,
+      "source_end_s": 42,
+      "duration_s": 8,
+      "fps": 30.0,
+      "frames": 240,
+      "annotations": [
+        {
+          "start_s": 0,
+          "end_s": 8,
+          "label": "negative_no_visible_collapse"
+        }
+      ]
+    },
+    {
+      "id": "big_blue_negative",
+      "path": "data/derived/big_blue_negative.mp4",
+      "sha256": "6d0779aa478aee806757a6a2d8ccca59ca2e5168b97961da33c562b3c049ad06",
+      "split": "test",
+      "source_start_s": 42,
+      "source_end_s": 50,
+      "duration_s": 8,
+      "fps": 30.0,
+      "frames": 240,
+      "annotations": [
+        {
+          "start_s": 0,
+          "end_s": 8,
+          "label": "negative_no_visible_collapse"
+        }
+      ]
+    },
+    {
+      "id": "big_blue_positive",
+      "path": "data/derived/big_blue_positive.mp4",
+      "sha256": "316c5b5b5bce4231bdeacb04cdd7676c03dccbf587e29c96e4a6c774335e929e",
+      "split": "test",
+      "source_start_s": 50,
+      "source_end_s": 66,
+      "duration_s": 16,
+      "fps": 30.0,
+      "frames": 480,
+      "annotations": [
+        {
+          "start_s": 0,
+          "end_s": 3,
+          "label": "negative_no_visible_collapse"
+        },
+        {
+          "start_s": 3,
+          "end_s": 5,
+          "label": "excluded_onset_transition"
+        },
+        {
+          "start_s": 5,
+          "end_s": 11,
+          "label": "positive_visible_collapse"
+        },
+        {
+          "start_s": 11,
+          "end_s": 16,
+          "label": "excluded_aftermath"
+        }
+      ]
+    }
+  ]
+}

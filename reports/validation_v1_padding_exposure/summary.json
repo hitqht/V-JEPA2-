@@ -1,0 +1,179 @@
+{
+  "design": "predefined paired synthetic interventions; not real incident detection",
+  "device": "mps",
+  "dtype": "float32",
+  "calibration_interval_s": [
+    0,
+    8
+  ],
+  "calibration_windows": 7,
+  "test_windows_per_condition": 4,
+  "test_starts_s": [
+    8.0,
+    10.0,
+    12.0,
+    14.0
+  ],
+  "threshold_z": 3,
+  "video_sha256": "40b48f4a0a29f58416023ecd32453060b361b707c62c782887845217c99c4d8f",
+  "method": "past-only-encoder-l1-v1",
+  "calibration_statistics": {
+    "vjepa_l1": [
+      0.5959566831588745,
+      0.005780536758899688
+    ],
+    "persistence_l1": [
+      0.6658555865287781,
+      0.013575464165210722
+    ],
+    "frame_difference": [
+      0.01143141184002161,
+      0.0007894395953044295
+    ]
+  },
+  "analysis_seconds": 10.261205374961719,
+  "future_leak_check_max_abs_prediction_difference": 0.0,
+  "target_change_mean_abs": 0.5994391702115536,
+  "limitations": [
+    "single source",
+    "synthetic positives",
+    "paired dependency",
+    "small sample",
+    "camera and illumination confounds",
+    "noncausal offline teacher targets"
+  ],
+  "metrics": [
+    {
+      "kind": "occlusion",
+      "method": "vjepa_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 1.0,
+      "paired_mean_delta": 0.048832401633262634,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 1.0,
+      "fpr_z3": 0.25
+    },
+    {
+      "kind": "occlusion",
+      "method": "persistence_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 1.0,
+      "paired_mean_delta": 0.0696144849061966,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 1.0,
+      "fpr_z3": 0.0
+    },
+    {
+      "kind": "occlusion",
+      "method": "frame_difference",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.4375,
+      "paired_mean_delta": -0.0011252444237470627,
+      "paired_win_rate": 0.25,
+      "tpr_z3": 0.5,
+      "fpr_z3": 0.75
+    },
+    {
+      "kind": "exposure",
+      "method": "vjepa_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.75,
+      "paired_mean_delta": 0.008883088827133179,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 0.5,
+      "fpr_z3": 0.25
+    },
+    {
+      "kind": "exposure",
+      "method": "persistence_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.8125,
+      "paired_mean_delta": 0.01197478175163269,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 0.0,
+      "fpr_z3": 0.0
+    },
+    {
+      "kind": "exposure",
+      "method": "frame_difference",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 1.0,
+      "paired_mean_delta": 0.020340795628726482,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 1.0,
+      "fpr_z3": 0.75
+    },
+    {
+      "kind": "freeze",
+      "method": "vjepa_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.5,
+      "paired_mean_delta": -0.002521216869354248,
+      "paired_win_rate": 0.5,
+      "tpr_z3": 0.0,
+      "fpr_z3": 0.25
+    },
+    {
+      "kind": "freeze",
+      "method": "persistence_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.8125,
+      "paired_mean_delta": 0.014301687479019165,
+      "paired_win_rate": 0.75,
+      "tpr_z3": 0.0,
+      "fpr_z3": 0.0
+    },
+    {
+      "kind": "freeze",
+      "method": "frame_difference",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.0,
+      "paired_mean_delta": -0.00775248440913856,
+      "paired_win_rate": 0.0,
+      "tpr_z3": 0.0,
+      "fpr_z3": 0.75
+    },
+    {
+      "kind": "reverse",
+      "method": "vjepa_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.4375,
+      "paired_mean_delta": -0.003167957067489624,
+      "paired_win_rate": 0.25,
+      "tpr_z3": 0.25,
+      "fpr_z3": 0.25
+    },
+    {
+      "kind": "reverse",
+      "method": "persistence_l1",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.25,
+      "paired_mean_delta": -0.004354298114776611,
+      "paired_win_rate": 0.0,
+      "tpr_z3": 0.0,
+      "fpr_z3": 0.0
+    },
+    {
+      "kind": "reverse",
+      "method": "frame_difference",
+      "n_positive": 4,
+      "n_negative": 4,
+      "auroc": 0.625,
+      "paired_mean_delta": 0.0010566057171672583,
+      "paired_win_rate": 1.0,
+      "tpr_z3": 0.75,
+      "fpr_z3": 0.75
+    }
+  ]
+}

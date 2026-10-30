@@ -1,0 +1,171 @@
+{
+  "samples": [
+    {
+      "id": "big_blue_calibration",
+      "duration_s": 8,
+      "split": "calibration"
+    },
+    {
+      "id": "big_blue_negative",
+      "duration_s": 8,
+      "split": "test"
+    },
+    {
+      "id": "big_blue_positive",
+      "duration_s": 16,
+      "split": "test"
+    }
+  ],
+  "independent_incidents": 1
+}
+[i] 设备 mps · 精度 float32 · 模型 models/vjepa2-vitl
+    1 窗口 · 至 00:01.9
+    2 窗口 · 至 00:02.9
+    3 窗口 · 至 00:03.9
+    4 窗口 · 至 00:04.9
+    5 窗口 · 至 00:05.9
+    6 窗口 · 至 00:06.9
+    7 窗口 · 至 00:07.9
+
+[✓] 完成：7 个窗口，耗时 3 秒，输出目录 outputs/big_blue_calibration/
+[i] 没有窗口超过阈值 z≥3。可用 --threshold 调低，或看 timeline.png 的相对高点。
+[i] 设备 mps · 精度 float32 · 模型 models/vjepa2-vitl
+    1 窗口 · 至 00:01.9
+    2 窗口 · 至 00:02.9
+    3 窗口 · 至 00:03.9
+    4 窗口 · 至 00:04.9
+    5 窗口 · 至 00:05.9
+    6 窗口 · 至 00:06.9
+    7 窗口 · 至 00:07.9
+[i] 使用基线 outputs/big_blue_calibration/scores.csv（7 个窗口）
+
+[✓] 完成：7 个窗口，耗时 3 秒，输出目录 outputs/big_blue_negative/
+[!] 1 段超过阈值 z≥3，建议人工复核：
+    00:03.0 – 00:05.0  峰值 z=6.5 @ 00:03.9（整体画面也在变，可能是镜头/光线）
+[i] 设备 mps · 精度 float32 · 模型 models/vjepa2-vitl
+    1 窗口 · 至 00:01.9
+    2 窗口 · 至 00:02.9
+    3 窗口 · 至 00:03.9
+    4 窗口 · 至 00:04.9
+    5 窗口 · 至 00:05.9
+    6 窗口 · 至 00:06.9
+    7 窗口 · 至 00:07.9
+    8 窗口 · 至 00:08.9
+    9 窗口 · 至 00:09.9
+    10 窗口 · 至 00:10.9
+    已处理至 00:10.9 · 10 个窗口 · 2.56 窗口/秒
+    11 窗口 · 至 00:11.9
+    12 窗口 · 至 00:12.9
+    13 窗口 · 至 00:13.9
+    14 窗口 · 至 00:14.9
+    15 窗口 · 至 00:15.9
+[i] 使用基线 outputs/big_blue_calibration/scores.csv（7 个窗口）
+
+[✓] 完成：15 个窗口，耗时 6 秒，输出目录 outputs/big_blue_positive/
+[!] 2 段超过阈值 z≥3，建议人工复核：
+    00:02.0 – 00:06.0  峰值 z=7.9 @ 00:03.9（整体画面也在变，可能是镜头/光线）
+    00:10.0 – 00:13.0  峰值 z=5.4 @ 00:10.9（整体画面也在变，可能是镜头/光线）
+big_blue_calibration: 7 windows
+big_blue_negative: 7 windows
+big_blue_positive: 15 windows
+{
+  "dataset_version": "real-hazard-v1",
+  "manifest_sha256": "ac701099c6d6e335dd66ec4dcc6b6d4d95aa7440ed81023e1b56fc2278bfab71",
+  "model_manifest": {
+    "source": "Meta official checkpoint",
+    "url": "https://dl.fbaipublicfiles.com/vjepa2/vitl.pt",
+    "checkpoint_sha256": "5346856ec9df69487fe72a25bf2632aaa8112df33fb67708e3f7374edc1f7012",
+    "checkpoint_bytes": 5127726842,
+    "source_etag": "71cf6756d55670a39bb369fca4716a54-612",
+    "revision": "meta-vitl-5346856ec9df6948",
+    "zip_crc_verified": true,
+    "encoder_key": "target_encoder",
+    "predictor_key": "predictor",
+    "strict_load": true,
+    "transformers": "4.57.1",
+    "converted_weights_sha256": "10623f51b674bfc07371ff30283426f452c724e7512fd649fa8287965499a5bc"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "settings": {
+    "fps": 8,
+    "window": 16,
+    "stride": 8,
+    "fit": "pad",
+    "dtype": "float32",
+    "threshold_z": 3
+  },
+  "calibration_windows": 7,
+  "independent_real_incidents": 1,
+  "evaluated_test_windows": 15,
+  "excluded_test_windows": 7,
+  "calibration_statistics": {
+    "vjepa_l1": [
+      0.5952548980712891,
+      0.008220339846611023
+    ],
+    "persistence_l1": [
+      0.6709104180335999,
+      0.03795157932043075
+    ],
+    "frame_difference": [
+      0.017233237624168396,
+      0.009352298204787075
+    ]
+  },
+  "main_score_max_absolute_difference": 1.1920928955078125e-07,
+  "analysis_seconds": 12.176929665962234,
+  "metrics": [
+    {
+      "method": "vjepa_l1",
+      "n_positive": 6,
+      "n_negative": 9,
+      "tp": 2,
+      "fp": 3,
+      "tn": 6,
+      "fn": 4,
+      "auroc": 0.5925925925925926,
+      "precision": 0.4,
+      "recall": 0.3333333333333333,
+      "f1": 0.36363636363636365,
+      "fpr": 0.3333333333333333,
+      "balanced_accuracy": 0.5,
+      "event_detected": true,
+      "first_detection_last_frame_delay_s": 0.9000000000000004
+    },
+    {
+      "method": "persistence_l1",
+      "n_positive": 6,
+      "n_negative": 9,
+      "tp": 0,
+      "fp": 0,
+      "tn": 9,
+      "fn": 6,
+      "auroc": 0.5925925925925926,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "balanced_accuracy": 0.5,
+      "event_detected": false,
+      "first_detection_last_frame_delay_s": null
+    },
+    {
+      "method": "frame_difference",
+      "n_positive": 6,
+      "n_negative": 9,
+      "tp": 2,
+      "fp": 4,
+      "tn": 5,
+      "fn": 4,
+      "auroc": 0.37037037037037035,
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1": 0.3333333333333333,
+      "fpr": 0.4444444444444444,
+      "balanced_accuracy": 0.4444444444444444,
+      "event_detected": true,
+      "first_detection_last_frame_delay_s": 0.9000000000000004
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "video": "raw/excavator.webm",
+  "annotation_type": "approximate visual process phases; not anomaly ground truth",
+  "basis": "manually inspected 1-second contact sheet, 2026-10-30",
+  "intervals": [
+    {"start_s": 0, "end_s": 3, "label": "empty bucket lowers and slews toward digging area"},
+    {"start_s": 3, "end_s": 9, "label": "bucket in soil; digging and curling"},
+    {"start_s": 9, "end_s": 12, "label": "loaded bucket lifts"},
+    {"start_s": 12, "end_s": 15, "label": "loaded bucket slews toward truck"},
+    {"start_s": 15, "end_s": 17.667, "label": "bucket over truck; unloading"}
+  ],
+  "limitations": "Boundaries approximate, not independently annotated. The source has no verified safety incident labels."
+}

@@ -1,0 +1,19 @@
+{
+  "source_sha1_matches_commons": true,
+  "sample_hashes_verified": true,
+  "source_intervals_disjoint": true,
+  "main_outputs_windows": [
+    7,
+    7,
+    15
+  ],
+  "ground_truth_review_frames": [
+    240,
+    480
+  ],
+  "tests_passed": 29,
+  "main_analysis_code_sha256": "17ce49ef0827cefd075006b8ce25d2a7570d73592d232eca9d36f7eae73f1646",
+  "evaluation_code_sha256": "07d974ce9b96d00bf8a23c3e402d3b9eb1a59344bfbbc5191702a9c135ce79e2",
+  "protocol_sha256": "b94698962661ff0e2c652a3dae821ea7df426fc76949eb28ea049e6f0881dc18",
+  "model_weights_revision": "meta-vitl-5346856ec9df6948"
+}
